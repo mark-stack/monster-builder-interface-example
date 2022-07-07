@@ -1,0 +1,30 @@
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">&lt;?php</span>
+
+    <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">App\MonsterTemplates;</span>
+
+    <span style="color: #6ab825; font-weight: bold">use</span> <span style="color: #d0d0d0">App\Interfaces\MonsterAnatomyInterface;</span>
+    <span style="color: #6ab825; font-weight: bold">use</span> <span style="color: #d0d0d0">App\Interfaces\WeaponsInterface;</span>
+    
+    <span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Goblin</span> <span style="color: #6ab825; font-weight: bold">implements</span> <span style="color: #d0d0d0">MonsterAnatomyInterface,WeaponsInterface</span> <span style="color: #d0d0d0">{</span>
+    
+        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">strength</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$arms</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">float</span>
+        <span style="color: #d0d0d0">{</span>
+            <span style="color: #40ffff">$unique_strength_factor</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1.3</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #40ffff">$strength</span> <span style="color: #d0d0d0">=</span> <span style="color: #40ffff">$unique_strength_factor</span> <span style="color: #d0d0d0">*</span> <span style="color: #40ffff">$arms</span><span style="color: #d0d0d0">;</span>
+    
+            <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #40ffff">$strength</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+    
+        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">jumpingHeight</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$legs</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">float{</span>
+    
+            <span style="color: #40ffff">$jumping_height</span> <span style="color: #d0d0d0">=</span> <span style="color: #40ffff">$legs</span> <span style="color: #d0d0d0">*</span> <span style="color: #3677a9">20</span><span style="color: #d0d0d0">;</span>
+    
+            <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #40ffff">$jumping_height</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+    
+        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">killProbability</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$arms</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">float{</span>
+    
+            <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">85</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+    </pre></div>
+    
