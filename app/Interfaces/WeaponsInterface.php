@@ -4,6 +4,6 @@ namespace App\Interfaces;
 
 interface WeaponsInterface {
 
-    public function killProbability($arms);
+    public function killProbability($arms): float;
 
 }
