@@ -4,9 +4,9 @@
 
     <span style="color: #6ab825; font-weight: bold">interface</span> <span style="color: #d0d0d0">MonsterAnatomyInterface</span> <span style="color: #d0d0d0">{</span>
     
-        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">strength</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$arms</span><span style="color: #d0d0d0">);</span>
+        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">strength</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$arms</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">float;</span>
     
-        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">jumpingHeight</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$legs</span><span style="color: #d0d0d0">);</span>
+        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">jumpingHeight</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$legs</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">float;</span>
     
     <span style="color: #d0d0d0">}</span>
     </pre></div>
