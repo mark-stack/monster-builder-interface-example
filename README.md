@@ -1,2 +1,4 @@
-# monster-builder-interface-example
-This is an example utilizing interfaces to adhere to SOLID design principals
+# Monster Builder (SOLID Interface example)
+This is an example utilizing interfaces to adhere to SOLID design principles
+
+See 'Master' branch
