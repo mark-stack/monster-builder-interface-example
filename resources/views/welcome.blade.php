@@ -142,6 +142,33 @@
                 </div>
 
                 <div class="col-lg-12" style="">
+                    <div class="p-3" style="border: solid grey 2px;border-radius:10px;">
+                        <h4>Separate Request classes</h4>
+                        <p>
+                            The request validation is separated from the controller's store functions for easy modification. Notice "MonsterStoreRequest".
+                        </p>
+                        <b>Controller:</b>
+                        @include('snippets.use_request')
+                        <b>Request Class:</b>
+                        @include('snippets.request')
+                    </div>
+                </div>
+
+                <div class="col-lg-12" style="">
+                    <div class="p-3" style="border: solid grey 2px;border-radius:10px;">
+                        <h4>Service classes</h4>
+                        <p>
+                            This class handles getting all the monster attribute objects. It's the same concept of removing dynamic logic from the controllers for easier maintainablity.
+                        </p>
+                        <b>Controller:</b>
+                        @include('snippets.use_service')
+                        <br>
+                        <b>Service:</b>
+                        @include('snippets.service')
+                    </div>
+                </div>
+
+                <div class="col-lg-12" style="">
                     <div class="p-3" style="border: solid grey 2px;border-radius:10px;background-color:#000000;color:white">
                         <center>
                             <h4>Statis Analysis</h4>
@@ -154,7 +181,6 @@
                     </div>
                 </div>
             </div>
-            
 
         </div>
     </body>
