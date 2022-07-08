@@ -2,10 +2,10 @@
 
 namespace App\Interfaces;
 
-interface MonsterAnatomyInterface {
+interface MonsterAttributesInterface {
 
     public function strength($arms): float;
 
     public function jumpingHeight($legs): float;
-
+ 
 }

@@ -2,29 +2,33 @@
 
     <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">App\MonsterTemplates;</span>
 
-    <span style="color: #6ab825; font-weight: bold">use</span> <span style="color: #d0d0d0">App\Interfaces\MonsterAnatomyInterface;</span>
-    <span style="color: #6ab825; font-weight: bold">use</span> <span style="color: #d0d0d0">App\Interfaces\WeaponsInterface;</span>
+    <span style="color: #6ab825; font-weight: bold">use</span> <span style="color: #d0d0d0">App\Interfaces\MonsterAttributesInterface;</span>
+    <span style="color: #6ab825; font-weight: bold">use</span> <span style="color: #d0d0d0">App\Interfaces\FlyingInterface;</span>
     
-    <span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Goblin</span> <span style="color: #6ab825; font-weight: bold">implements</span> <span style="color: #d0d0d0">MonsterAnatomyInterface,WeaponsInterface</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Dragon</span> <span style="color: #6ab825; font-weight: bold">implements</span> <span style="color: #d0d0d0">MonsterAttributesInterface,FlyingInterface</span> <span style="color: #d0d0d0">{</span>
     
+        <span style="color: #999999; font-style: italic">//MonsterAttributesInterface</span>
         <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">strength</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$arms</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">float</span>
         <span style="color: #d0d0d0">{</span>
-            <span style="color: #40ffff">$unique_strength_factor</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1.3</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #40ffff">$unique_strength_factor</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1.7</span><span style="color: #d0d0d0">;</span>
             <span style="color: #40ffff">$strength</span> <span style="color: #d0d0d0">=</span> <span style="color: #40ffff">$unique_strength_factor</span> <span style="color: #d0d0d0">*</span> <span style="color: #40ffff">$arms</span><span style="color: #d0d0d0">;</span>
-    
+            
             <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #40ffff">$strength</span><span style="color: #d0d0d0">;</span>
         <span style="color: #d0d0d0">}</span>
     
+        <span style="color: #999999; font-style: italic">//MonsterAttributesInterface</span>
         <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">jumpingHeight</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$legs</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">float{</span>
     
-            <span style="color: #40ffff">$jumping_height</span> <span style="color: #d0d0d0">=</span> <span style="color: #40ffff">$legs</span> <span style="color: #d0d0d0">*</span> <span style="color: #3677a9">20</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #40ffff">$jumping_height</span> <span style="color: #d0d0d0">=</span> <span style="color: #40ffff">$legs</span> <span style="color: #d0d0d0">*</span> <span style="color: #3677a9">30</span><span style="color: #d0d0d0">;</span>
     
             <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #40ffff">$jumping_height</span><span style="color: #d0d0d0">;</span>
         <span style="color: #d0d0d0">}</span>
     
-        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">killProbability</span><span style="color: #d0d0d0">(</span><span style="color: #40ffff">$arms</span><span style="color: #d0d0d0">):</span> <span style="color: #d0d0d0">float{</span>
+        <span style="color: #999999; font-style: italic">//FlyingInterface</span>
+        <span style="color: #6ab825; font-weight: bold">public</span> <span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #447fcf">flyingSpeed</span><span style="color: #d0d0d0">():</span> <span style="color: #d0d0d0">float{</span>
     
-            <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">85</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #40ffff">$flyingSpeed</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">27</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #40ffff">$flyingSpeed</span><span style="color: #d0d0d0">;</span>
         <span style="color: #d0d0d0">}</span>
     </pre></div>
     

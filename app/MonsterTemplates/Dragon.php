@@ -2,10 +2,12 @@
 
 namespace App\MonsterTemplates;
 
-use App\Interfaces\MonsterAnatomyInterface;
+use App\Interfaces\MonsterAttributesInterface;
+use App\Interfaces\FlyingInterface;
 
-class Dragon implements MonsterAnatomyInterface {
+class Dragon implements MonsterAttributesInterface,FlyingInterface {
 
+    //MonsterAttributesInterface
     public function strength($arms): float
     {
         $unique_strength_factor = 1.7;
@@ -14,6 +16,7 @@ class Dragon implements MonsterAnatomyInterface {
         return $strength;
     }
 
+    //MonsterAttributesInterface
     public function jumpingHeight($legs): float{
 
         $jumping_height = $legs * 30;
@@ -21,4 +24,10 @@ class Dragon implements MonsterAnatomyInterface {
         return $jumping_height;
     }
 
+    //FlyingInterface
+    public function flyingSpeed(): float{
+
+        $flyingSpeed = 27;
+        return $flyingSpeed;
+    }
 }
