@@ -140,6 +140,19 @@
                         @include('snippets.multi_interface')
                     </div>
                 </div>
+
+                <div class="col-lg-12" style="">
+                    <div class="p-3" style="border: solid grey 2px;border-radius:10px;background-color:#000000;color:white">
+                        <center>
+                            <h4>Statis Analysis</h4>
+                            <p>
+                            Static analysis using 'PHP Insights'. This is a basic example, but features low cyclomatic complexity in the functions.<br>
+                            <a href="https://phpinsights.com/" target="_blank">phpinsights.com</a>
+                            </p>
+                            <img src="/images/insights.jpg" style="width:100%;max-width:473px">
+                        </center>
+                    </div>
+                </div>
             </div>
             
 
