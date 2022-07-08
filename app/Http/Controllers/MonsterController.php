@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Monster;
+use App\Http\Requests\MonsterStoreRequest;
 
 class MonsterController extends Controller
 {
-    public function create(Request $request){
+    public function store(MonsterStoreRequest $request){
 
-        $validated = $request->validate([
-            'type' => 'required',
-            'arms' => 'required|digits_between:0,6',
-            'legs' => 'required|digits_between:0,8',
-        ]);
+        //Create using validation array
+        $new_monster = Monster::create($request->validated());
 
-        $new_monster = Monster::create($validated);
-
+        //Success message and CTA to check out docs below
         $flash_msg = 'You created a '. ucfirst($new_monster->type).". <a href='#solid'>Scroll down</a> to see why it's SOLID code.";
 
         return back()->with('success',$flash_msg);
