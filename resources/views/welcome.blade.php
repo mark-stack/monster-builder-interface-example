@@ -21,10 +21,10 @@
             <h1 class="display-5 fw-bold">Monster Builder</h1>
             <div class="col-lg-6 mx-auto">
               <p class="lead mb-4">
-                This is an example of using PHP Interfaces in Laravel to adhere to SOLID design.
+                This is an example of using PHP Interfaces in Laravel to adhere to <b>SOLID</b> design.
             </p>
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a href="https://github.com/mark-stack/monster-builder-interface-example" class="btn btn-primary btn-lg px-4 gap-3" style="background-color:#24292f" target="_blank">
+                <a href="https://github.com/mark-stack/monster-builder-interface-example/tree/master" class="btn btn-primary btn-lg px-4 gap-3" style="background-color:#24292f" target="_blank">
                     <i class="fa-brands fa-github"></i> Github Repo
                 </a>
               </div>
@@ -47,13 +47,13 @@
                         {!! session('success') !!}
                     </div>
                 @endif
-                <div class="col-lg-5" style="">
+                <div class="col-lg-4" style="">
                     <div class="p-3" style="border: solid grey 2px;border-radius:10px;height:100%">
                         <h3>Build a Monster</h3>
                         <form action="/" method="post"> 
                             @csrf
                             <select required class="form-control" name="type" style="margin-bottom:7px">
-                                <option value="" disabled selected>Monster type dropdown</option>
+                                <option value="" disabled selected>Select Monster</option>
                                 <option value="dragon">Dragon</option>
                                 <option value="goblin">Goblin</option>
                             </select>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-7">
+                <div class="col-lg-8">
                     <div class="p-3" style="border: solid grey 2px;border-radius:10px;">
                         <h3>Recent Monsters</h3>
                         <table style="width:100%">
@@ -75,6 +75,7 @@
                                 <th>Legs</th>
                                 <th>Strength</th>
                                 <th>Jump height</th>
+                                <th>Flying speed</th>
                             </tr>
                             @foreach($monsters as $monster)
                                 <tr>
@@ -83,6 +84,11 @@
                                     <td>{{ $monster->legs }}</td>
                                     <td>{{ $monster_objects[$monster->type]->strength($monster->arms) }}</td>
                                     <td>{{ $monster_objects[$monster->type]->jumpingHeight($monster->legs) }}cm</td>
+                                    @if($monster->type == 'dragon') 
+                                        <td>{{ $monster_objects[$monster->type]->flyingSpeed() }}</td>
+                                    @else
+                                        <td style="color:grey">Can't fly</td>
+                                    @endif
                                 </tr>
                             @endforeach
                         </table>
@@ -125,10 +131,10 @@
                     <div class="p-3" style="border: solid grey 2px;border-radius:10px;">
                         <h4>Multiple Interfaces</h4>
                         <p>
-                            <b>S:</b> Single purpose of Goblin attributes.<br> 
+                            <b>S:</b> Single purpose of Dragon attributes.<br> 
                             <b>O:</b> This is extensible. I can create new classes for future monsters like a "sea beast".<br>
                             <b>L:</b> Type hinted functions. e.g 'strength' must return a float.<br>
-                            <b>I:</b> This implements multiple interfaces specific for Goblins. Dragons wont use weopons.<br>
+                            <b>I:</b> This implements multiple interfaces specific for Dragons. Dragons can fly whereas Goblins can't.<br>
                             <b>D:</b> High level function isn't depending on lower level functions.
                         </p>
                         @include('snippets.multi_interface')
